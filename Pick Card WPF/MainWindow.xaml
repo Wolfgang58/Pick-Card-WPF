@@ -1,0 +1,26 @@
+﻿<Window x:Class="Pick_Card_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pick_Card_WPF"
+        mc:Ignorable="d"
+        Title="Kart Seç" Height="300" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
+            <Label Content="Kaç tane kart seçeceksin" FontSize="20"/>
+            <Slider x:Name="numberOfCards" Minimum="1" Maximum="15" TickPlacement="BottomRight" IsSnapToTickEnabled="True" AutoToolTipPlacement="TopLeft" Foreground="Black"/>
+        </StackPanel>
+        <Button Grid.Row="1" Content="Kart seç" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"/>
+        <ListBox x:Name="listOfCards" Grid.Column="1" Grid.RowSpan="2" FontSize="20" Margin="20,20,20,20" />
+    </Grid>
+</Window>
